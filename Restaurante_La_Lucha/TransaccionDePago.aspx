@@ -3,7 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br /><br />
-    <h2>Digite los datos de su tarjeta de Cr&eacute;dito o D&eacute;bito</h2>
+    <h2>Realizar Pago de su pedido</h2>
+    <h3>Digite los datos de su tarjeta de Cr&eacute;dito o D&eacute;bito</h3>
     <asp:TextBox ID="TextBox1" runat="server" placeholder="Número de tarjeta" BorderColor="#CCCCCC"></asp:TextBox><br />
     <asp:TextBox ID="TextBox2" runat="server" placeholder="MM/AA" BorderColor="#CCCCCC"></asp:TextBox>
     <asp:TextBox ID="TextBox3" runat="server" placeholder="CVV" BorderColor="#CCCCCC"></asp:TextBox>
