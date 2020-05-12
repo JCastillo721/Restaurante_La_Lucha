@@ -13,5 +13,34 @@ namespace Restaurante
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TransaccionDePago.aspx");
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            RadioButtonList1.Enabled = false;
+            if (RadioButtonList1.SelectedItem.ToString() == "Tarjeta")
+            {
+                
+                Panel1.Visible = true;
+
+            }
+            else
+            {
+                Panel1.Visible = false;
+            }
+            Panel2.Visible = true;
+        }
+
+        
     }
 }

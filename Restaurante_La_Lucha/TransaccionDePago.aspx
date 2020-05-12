@@ -9,9 +9,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br /><br />
     <h2>Realizar Pago de su pedido</h2>
-    <h3>Digite los datos de su tarjeta de Cr&eacute;dito o D&eacute;bito</h3>
-    <br /><br />
-    
+    <br />
+    <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+        <asp:ListItem Value="1">Tarjeta</asp:ListItem>
+        <asp:ListItem Value="2">Efectivo</asp:ListItem>
+    </asp:RadioButtonList>
+    <asp:Button ID="Button2" runat="server" Text="Confirmar forma de pago" OnClick="Button2_Click" />
+    <asp:Panel ID="Panel1" runat="server" Visible="False">
+        <h3>Digite los datos de su tarjeta de Cr&eacute;dito o D&eacute;bito</h3>
     <table>
         <tr>
             <td class="auto-style1">N&uacute;mero de la tarjeta:</td>
@@ -21,8 +26,35 @@
         </tr>
         <tr>
             <td class="auto-style1">Mes/Año de Expiraci&oacute;n:</td>
-            <td><asp:TextBox ID="TextBox2" runat="server" BorderColor="#CCCCCC" TextMode="Month"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Seleccione la fecha de expiración"></asp:RequiredFieldValidator>
+            <td>
+                <asp:DropDownList ID="DropDownList1" runat="server" Width="50px">
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                    <asp:ListItem>5</asp:ListItem>
+                    <asp:ListItem>6</asp:ListItem>
+                    <asp:ListItem>7</asp:ListItem>
+                    <asp:ListItem>8</asp:ListItem>
+                    <asp:ListItem>9</asp:ListItem>
+                    <asp:ListItem>10</asp:ListItem>
+                    <asp:ListItem>11</asp:ListItem>
+                    <asp:ListItem>12</asp:ListItem>
+                </asp:DropDownList>
+                <asp:DropDownList ID="DropDownList2" runat="server" Width="75px">
+                    <asp:ListItem>2020</asp:ListItem>
+                    <asp:ListItem>2021</asp:ListItem>
+                    <asp:ListItem>2022</asp:ListItem>
+                    <asp:ListItem>2023</asp:ListItem>
+                    <asp:ListItem>2024</asp:ListItem>
+                    <asp:ListItem>2025</asp:ListItem>
+                    <asp:ListItem>2026</asp:ListItem>
+                    <asp:ListItem>2027</asp:ListItem>
+                    <asp:ListItem>2028</asp:ListItem>
+                    <asp:ListItem>2029</asp:ListItem>
+                    <asp:ListItem>2030</asp:ListItem>
+                    <asp:ListItem>2031</asp:ListItem>
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -44,9 +76,13 @@
             </td>
         </tr>
     </table>
-    <asp:Label ID="Label1" runat="server" Text="Monto: $"></asp:Label><asp:Label ID="Label2" runat="server" Text="0.00"></asp:Label>
-    <br />
-    <asp:Label ID="Label3" runat="server" Text="Orden N°: "></asp:Label><asp:Label ID="Label4" runat="server" Text="0"></asp:Label>
-    <br />
-    <asp:Button ID="Button1" runat="server" Text="Pagar" />
+    </asp:Panel>
+    <asp:Panel ID="Panel2" runat="server" Visible="False">
+        <asp:Label ID="Label1" runat="server" Text="Monto: $"></asp:Label><asp:Label ID="Label2" runat="server" Text="0.00"></asp:Label>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Orden N°: "></asp:Label><asp:Label ID="Label4" runat="server" Text="0"></asp:Label>
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Pagar" OnClick="Button1_Click" />
+    </asp:Panel>
+    
 </asp:Content>
