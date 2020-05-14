@@ -12,7 +12,7 @@
     <br />
     <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
         <asp:ListItem Value="1">Tarjeta</asp:ListItem>
-        <asp:ListItem Value="2">Efectivo</asp:ListItem>
+        <asp:ListItem Value="2">Efectivo (Pagando al repartidor)</asp:ListItem>
     </asp:RadioButtonList>
     <asp:Button ID="Button2" runat="server" Text="Confirmar forma de pago" OnClick="Button2_Click" />
     <asp:Panel ID="Panel1" runat="server" Visible="False">
